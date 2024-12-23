@@ -1,0 +1,19 @@
+class Main {
+    public void extraction(int n) {
+        while(n>0){
+            int unit=n%10;
+            System.out.println(unit);
+            n=n/10;
+        }
+     
+        
+        
+    }
+
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.extraction(34238945);
+
+        System.out.println("Try programiz.pro");
+    }
+}
