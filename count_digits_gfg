@@ -1,0 +1,16 @@
+class Solution {
+    static int evenlyDivides(int n) {
+        int num = n; // Copy of the number
+        int count = 0;
+
+        while (num > 0) {
+            int unit = num % 10; // Extract the last digit
+            // Check for division by zero and divisibility
+            if (unit != 0 && n % unit == 0) {
+                count++;
+            }
+            num = num / 10; // Remove the last digit
+        }
+        return count;
+    }
+}
