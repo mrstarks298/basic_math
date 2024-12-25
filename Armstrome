@@ -1,0 +1,23 @@
+class Main {
+    public static  boolean isArmstrome(int x) {
+        if(x<0){
+            return false;
+        }
+        int  original=x;
+        long sumup=0l;
+        int numdigits=String.valueOf(x).length();
+       while(x!=0){
+        int id=x%10;
+        sumup+=Math.pow(id,numdigits);
+        x=x/10;
+
+       }
+       return original==(int)sumup;
+    }
+    public static void main(String[] args) {
+        Main m = new Main();
+        boolean result = m.isArmstrome(1634); // Capture the result
+        System.out.println(result);       // Print the reversed number
+
+    }
+}
