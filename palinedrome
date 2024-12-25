@@ -1,0 +1,23 @@
+class Main {
+    public boolean isPalindrome(int x) {
+        if(x<0){
+            return false;
+        }
+        int  original=x;
+        long rev=0l;
+       while(x!=0){
+        int id=x%10;
+        rev=(rev*10)+id;
+        x=x/10;
+
+       }
+       return original==(int)rev;
+    }
+    public static void main(String[] args) {
+        Main m = new Main();
+        boolean result = m.isPalindrome(123); // Capture the result
+        System.out.println(result);       // Print the reversed number
+
+        System.out.println("Try programiz.pro");
+    }
+}
